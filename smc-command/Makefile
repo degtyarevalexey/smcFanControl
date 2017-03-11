@@ -7,7 +7,7 @@ smc: smc.o
 	$(CC) $(CFLAGS) -o smc smc.o
 
 smc.o: smc.h smc.c
-	$(CC) -c smc.c
+	$(CC) -DCMD_TOOL_BUILD -c smc.c
 
 clean:
 	-rm -f smc smc.o
